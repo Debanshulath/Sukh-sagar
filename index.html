@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Sukh Sagar, Vegetarian Restaurant, Indian Cuisine, Raipur, Pure Vegetarian Dining, chinese Cuisine, breakfast, lunch, dinner, desserts, softdrinks">
+    <meta name="keywords" content="Sukh Sagar, Vegetarian Restaurant, Indian Cuisine, Raipur, Pure Vegetarian Dining,chinese Cuisine, breakfast, lunch, dinner, desserts, softdrinks">
     <meta name="description" content="Sukh Sagar is a pure vegetarian restaurant in Raipur, offering a delightful range of Indian dishes. Experience the best of vegetarian dining with us.">
     <title>Sukh Sagar - Pure Vegetarian Indian Dining</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -75,7 +75,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(20, 184, 166, 0.7);
+            background: rgba(20, 184, 166, 0.7); /* Teal overlay matching theme */
             color: white;
             display: flex;
             align-items: center;
@@ -84,9 +84,13 @@
             opacity: 0;
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
             transform: translateY(100%);
+<<<<<<< HEAD
             font-size: 0.875rem;
             padding: 1rem;
             text-align: center;
+=======
+            font-size: 1rem; /* Smaller font for mobile */
+>>>>>>> parent of 1b03e39 (Update index.html)
         }
         .gallery-image:hover::after {
             opacity: 1;
@@ -99,6 +103,7 @@
             transform: scale(1.1);
             opacity: 0.7;
         }
+<<<<<<< HEAD
         /* Navbar-specific styles */
         .hamburger .close-icon {
             display: none;
@@ -165,9 +170,12 @@
                 padding: 0.5rem;
             }
         }
+=======
+>>>>>>> parent of 1b03e39 (Update index.html)
         @media (min-width: 640px) {
             .menu-item::after,
             .gallery-image::after {
+<<<<<<< HEAD
                 font-size: 1rem;
             }
             .hamburger {
@@ -175,169 +183,234 @@
             }
             .nav-menu {
                 display: flex !important;
+=======
+                font-size: 1.25rem; /* Larger font for non-mobile */
+>>>>>>> parent of 1b03e39 (Update index.html)
             }
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-ivory-50">
     <!-- Navbar -->
-    <nav class="bg-teal-700 text-white shadow-lg fixed w-full z-10" role="navigation" aria-label="Main navigation">
+    <nav class="bg-teal-700 text-white shadow-lg fixed w-full z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center justify-center w-full sm:w-auto" style="position: relative; left: -80px;">
                     <img src="assets/ico.webp" alt="Sukh Sagar Logo" class="w-12 h-12 rounded-full mr-2">
                     <h1 class="text-2xl sm:text-3xl font-bold">Sukh Sagar</h1>
+=======
+            <div class="flex justify-between h-16">
+                <div class="flex items-center" style="position: relative; right: 130px;">
+                    <img src="assets/ico.webp" alt="" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 5px; ;">
+                    <h1 class="text-3xl font-bold">Sukh Sagar</h1>
+>>>>>>> parent of 1b03e39 (Update index.html)
                 </div>
-                <button class="hamburger sm:hidden" aria-label="Toggle menu">
-                    <svg class="w-8 h-8 open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg class="w-8 h-8 close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-                <div class="nav-menu items-center space-x-6 hidden sm:flex" aria-hidden="false">
-                    <a href="#home" class="hover:text-yellow-300 py-3 px-2">Home</a>
-                    <a href="#menu" class="hover:text-yellow-300 py-3 px-2">Menu</a>
-                    <a href="#gallery" class="hover:text-yellow-300 py-3 px-2">Gallery</a>
-                    <a href="#offers" class="hover:text-yellow-300 py-3 px-2">Offers</a>
-                    <a href="#testimonials" class="hover:text-yellow-300 py-3 px-2">Testimonials</a>
-                    <a href="#about" class="hover:text-yellow-300 py-3 px-2">About</a>
-                    <a href="#contact" class="hover:text-yellow-300 py-3 px-2">Contact</a>
+                <div class="flex items-center space-x-6">
+                    <a href="#home" class="hover:text-gold-300">Home</a>
+                    <a href="#menu" class="hover:text-gold-300">Menu</a>
+                    <a href="#gallery" class="hover:text-gold-300">Gallery</a>
+                    <a href="#offers" class="hover:text-gold-300">Offers</a>
+                    <a href="#testimonials" class="hover:text-gold-300">Testimonials</a>
+                    <a href="#about" class="hover:text-gold-300">About</a>
+                    <a href="#contact" class="hover:text-gold-300">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1606490734537-2d37a395a8f6'); background-size: cover; background-position: center;" role="main">
+    <section id="home" class="h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1606490734537-2d37a395a8f6')">
         <div class="h-full flex items-center justify-center bg-teal-900 bg-opacity-70">
             <div class="text-center text-white">
-                <h1 class="text-4xl sm:text-5xl font-bold mb-4">Sukh Sagar</h1>
-                <p class="text-lg sm:text-xl mb-6">Pure Vegetarian Indian Delights</p>
-                <a href="#menu" class="bg-yellow-500 text-teal-900 px-10 py-4 rounded-full hover:bg-yellow-400 transition text-lg">Explore Our Menu</a>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">Sukh Sagar</h1>
+                <p class="text-xl md:text-2xl mb-6">Pure Vegetarian Indian Delights</p>
+                <a href="#menu" class="bg-gold-500 text-teal-900 px-8 py-3 rounded-full hover:bg-gold-400 transition">Explore Our Menu</a>
             </div>
         </div>
     </section>
 
     <!-- Special Offers Banner -->
-    <section id="offers" class="py-8 bg-yellow-500 text-teal-900">
+    <section id="offers" class="py-8 bg-gold-500 text-teal-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-4">Special Offers</h2>
             <p class="text-lg mb-4">Enjoy 20% off on your first dine-in or get a free dessert with orders above ₹500!</p>
-            <a href="#contact" class="bg-teal-700 text-white px-8 py-3 rounded-full hover:bg-teal-600 transition text-lg">Reserve Now</a>
+            <a href="#contact" class="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-600 transition">Reserve Now</a>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 bg-white menu-section">
+    <section id="menu" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">Our Vegetarian Menu</h2>
             <!-- Starters -->
             <h3 class="text-2xl font-semibold text-teal-700 mb-6">Starters</h3>
+<<<<<<< HEAD
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
                 <div id="aloo-tikki" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Golden crispy potato patties spiced with cumin and coriander, served with tangy tamarind chutney and mint yogurt dip.">
                     <img src="assets/aloo tikki.jpeg" alt="Aloo Tikki" class="w-full h-48 object-cover" loading="lazy">
+=======
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+                <div id="aloo-tikki" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/aloo tikki.jpeg" alt="Aloo Tikki" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Aloo Tikki</h4>
-                        <p class="text-gray-600 text-base mb-2">Crispy potato patties with tangy chutney</p>
-                        <p class="text-yellow-500 font-bold">₹99</p>
+                        <p class="text-gray-600 text-sm mb-2">Crispy potato patties with tangy chutney</p>
+                        <p class="text-gold-500 font-bold">₹99</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="paneer-pakora" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Soft paneer cubes coated in a spiced chickpea flour batter, deep-fried to a golden crisp, paired with spicy green chutney.">
                     <img src="assets/paneer pakoda.jpeg" alt="Paneer Pakora" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="paneer-pakora" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/paneer pakoda.jpeg" alt="Paneer Pakora" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Paneer Pakora</h4>
-                        <p class="text-gray-600 text-base mb-2">Spiced paneer fritters, crispy and delicious</p>
-                        <p class="text-yellow-500 font-bold">₹149</p>
+                        <p class="text-gray-600 text-sm mb-2">Spiced paneer fritters, crispy and delicious</p>
+                        <p class="text-gold-500 font-bold">₹149</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="hara-bhara-kebab" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Vibrant green patties made from spinach, green peas, and potatoes, infused with aromatic spices, grilled to perfection.">
                     <img src="assets/harabhara kabab.jpeg" alt="Hara Bhara Kebab" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="hara-bhara-kebab" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/harabhara kabab.jpeg" alt="Hara Bhara Kebab" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Hara Bhara Kebab</h4>
-                        <p class="text-gray-600 text-base mb-2">Spinach and green pea patties with spices</p>
-                        <p class="text-yellow-500 font-bold">₹129</p>
+                        <p class="text-gray-600 text-sm mb-2">Spinach and green pea patties with spices</p>
+                        <p class="text-gold-500 font-bold">₹129</p>
                     </div>
                 </div>
             </div>
             <!-- Main Courses -->
             <h3 class="text-2xl font-semibold text-teal-700 mb-6">Main Courses</h3>
+<<<<<<< HEAD
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
                 <div id="chole-bhature" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Spicy chickpea curry slow-cooked with aromatic spices, served with fluffy, deep-fried bhature bread.">
                     <img src="assets/chole bhature.jpeg" alt="Chole Bhature" class="w-full h-48 object-cover" loading="lazy">
+=======
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+                <div id="chole-bhature" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/chole bhature.jpeg" alt="Chole Bhature" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Chole Bhature</h4>
-                        <p class="text-gray-600 text-base mb-2">Spiced chickpeas with fluffy fried bread</p>
-                        <p class="text-yellow-500 font-bold">₹199</p>
+                        <p class="text-gray-600 text-sm mb-2">Spiced chickpeas with fluffy fried bread</p>
+                        <p class="text-gold-500 font-bold">₹199</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="veg-biryani" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Aromatic basmati rice layered with fresh vegetables, saffron, and exotic spices, served with cooling raita.">
                     <img src="assets/veg biryani.jpeg" alt="Veg Biryani" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="veg-biryani" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/veg biryani.jpeg" alt="Veg Biryani" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Veg Biryani</h4>
-                        <p class="text-gray-600 text-base mb-2">Fragrant rice with mixed vegetables and spices</p>
-                        <p class="text-yellow-500 font-bold">₹249</p>
+                        <p class="text-gray-600 text-sm mb-2">Fragrant rice with mixed vegetables and spices</p>
+                        <p class="text-gold-500 font-bold">₹249</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="dal-makhani" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Creamy black lentils slow-cooked with butter, cream, and a blend of spices for a rich, velvety texture.">
                     <img src="assets/dal makhani.jpeg" alt="Dal Makhani" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="dal-makhani" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/dal makhani.jpeg" alt="Dal Makhani" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Dal Makhani</h4>
-                        <p class="text-gray-600 text-base mb-2">Creamy black lentils with butter and spices</p>
-                        <p class="text-yellow-500 font-bold">₹179</p>
+                        <p class="text-gray-600 text-sm mb-2">Creamy black lentils with butter and spices</p>
+                        <p class="text-gold-500 font-bold">₹179</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="paneer-butter-masala" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Tender paneer cubes simmered in a rich, buttery tomato-based gravy with a hint of cream and spices.">
                     <img src="assets/paneer butter masala.jpeg" alt="Paneer Butter Masala" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="paneer-butter-masala" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/paneer butter masala.jpeg" alt="Paneer Butter Masala" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Paneer Butter Masala</h4>
-                        <p class="text-gray-600 text-base mb-2">Cottage cheese in a rich tomato gravy</p>
-                        <p class="text-yellow-500 font-bold">₹269</p>
+                        <p class="text-gray-600 text-sm mb-2">Cottage cheese in a rich tomato gravy</p>
+                        <p class="text-gold-500 font-bold">₹269</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="malai-kofta" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Soft vegetable and paneer dumplings in a creamy cashew and tomato sauce, mildly spiced for a luxurious taste.">
                     <img src="assets/malai kofta.jpeg" alt="Malai Kofta" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="malai-kofta" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/malai kofta.jpeg" alt="Malai Kofta" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Malai Kofta</h4>
-                        <p class="text-gray-600 text-base mb-2">Vegetable dumplings in creamy cashew sauce</p>
-                        <p class="text-yellow-500 font-bold">₹289</p>
+                        <p class="text-gray-600 text-sm mb-2">Vegetable dumplings in creamy cashew sauce</p>
+                        <p class="text-gold-500 font-bold">₹289</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="veg-korma" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="A medley of fresh vegetables cooked in a creamy coconut and cashew curry, infused with mild spices.">
                     <img src="assets/veg korma.jpeg" alt="Veg Korma" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="veg-korma" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/veg korma.jpeg" alt="Veg Korma" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Veg Korma</h4>
-                        <p class="text-gray-600 text-base mb-2">Mixed vegetables in a creamy coconut curry</p>
-                        <p class="text-yellow-500 font-bold">₹229</p>
+                        <p class="text-gray-600 text-sm mb-2">Mixed vegetables in a creamy coconut curry</p>
+                        <p class="text-gold-500 font-bold">₹229</p>
                     </div>
                 </div>
             </div>
             <!-- Desserts & Drinks -->
             <h3 class="text-2xl font-semibold text-teal-700 mb-6">Desserts & Drinks</h3>
+<<<<<<< HEAD
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div id="gulab-jamun" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Soft, melt-in-the-mouth milk dumplings soaked in rose-flavored sugar syrup, garnished with pistachios.">
                     <img src="assets/gulab jamun.jpeg" alt="Gulab Jamun" class="w-full h-48 object-cover" loading="lazy">
+=======
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div id="gulab-jamun" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/gulab jamun.jpeg" alt="Gulab Jamun" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Gulab Jamun</h4>
-                        <p class="text-gray-600 text-base mb-2">Soft milk dumplings in sweet syrup</p>
-                        <p class="text-yellow-500 font-bold">₹79</p>
+                        <p class="text-gray-600 text-sm mb-2">Soft milk dumplings in sweet syrup</p>
+                        <p class="text-gold-500 font-bold">₹79</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="kulfi" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Rich, creamy Indian ice cream infused with cardamom and saffron, topped with slivers of almonds and pistachios.">
                     <img src="assets/kulfi.jpeg" alt="Kulfi" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="kulfi" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/kulfi.jpeg" alt="Kulfi" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Kulfi</h4>
-                        <p class="text-gray-600 text-base mb-2">Traditional Indian ice cream with nuts</p>
-                        <p class="text-yellow-500 font-bold">₹99</p>
+                        <p class="text-gray-600 text-sm mb-2">Traditional Indian ice cream with nuts</p>
+                        <p class="text-gold-500 font-bold">₹99</p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div id="masala-chai" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Aromatic Indian tea brewed with a blend of spices like cardamom, cinnamon, and ginger, served with steamed milk.">
                     <img src="assets/chai.jpeg" alt="Masala Chai" class="w-full h-48 object-cover" loading="lazy">
+=======
+                <div id="masala-chai" class="bg-ivory-100 rounded-lg shadow-md overflow-hidden hover-scale">
+                    <img src="assets/chai.jpeg" alt="Masala Chai" class="w-full h-40 object-cover">
+>>>>>>> parent of 1b03e39 (Update index.html)
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Masala Chai</h4>
-                        <p class="text-gray-600 text-base mb-2">Spiced Indian tea with milk</p>
-                        <p class="text-yellow-500 font-bold">₹49</p>
+                        <p class="text-gray-600 text-sm mb-2">Spiced Indian tea with milk</p>
+                        <p class="text-gold-500 font-bold">₹49</p>
                     </div>
                 </div>
             </div>
@@ -345,10 +418,11 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-gray-100 gallery-section">
+    <section id="gallery" class="py-20 bg-ivory-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">Gallery</h2>
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
+<<<<<<< HEAD
                 <a href="#menu" class="gallery-image hover-scale" data-alt="Our elegant dining area with warm lighting and traditional Indian decor, perfect for family gatherings.">
                     <img src="assets/dinning table.jpeg" alt="Dining Area" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
@@ -378,6 +452,37 @@
                 </a>
                 <a href="#masala-chai" class="gallery-image hover-scale" data-alt="Steaming masala chai brewed with aromatic spices, perfect for a cozy experience.">
                     <img src="assets/chai.jpeg" alt="Masala Chai" class="w-full h-64 object-cover rounded-lg" loading="lazy">
+=======
+                <a href="#menu" class="gallery-image hover-scale" data-alt="Dining Area">
+                    <img src="assets/dinning table.jpeg" alt="Dining Area" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#menu" class="gallery-image hover-scale" data-alt="Restaurant Interior">
+                    <img src="assets/interior.jpeg" alt="Restaurant Interior" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#menu" class="gallery-image hover-scale" data-alt="Food Prep">
+                    <img src="assets/food prep2.jpeg" alt="Food Prep" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#chole-bhature" class="gallery-image hover-scale" data-alt="Chole Bhature">
+                    <img src="assets/chole bhature.jpeg" alt="Chole Bhature" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#aloo-tikki" class="gallery-image hover-scale" data-alt="Aloo Tikki">
+                    <img src="assets/aloo tikki.jpeg" alt="Aloo Tikki" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#paneer-pakora" class="gallery-image hover-scale" data-alt="Paneer Pakora">
+                    <img src="assets/paneer pakoda.jpeg" alt="Paneer Pakora" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#veg-biryani" class="gallery-image hover-scale" data-alt="Veg Biryani">
+                    <img src="assets/veg biryani.jpeg" alt="Veg Biryani" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#gulab-jamun" class="gallery-image hover-scale" data-alt="Gulab Jamun">
+                    <img src="assets/gulab jamun.jpeg" alt="Gulab Jamun" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#kulfi" class="gallery-image hover-scale" data-alt="Kulfi">
+                    <img src="assets/kulfi.jpeg" alt="Kulfi" class="w-full h-64 object-cover rounded-lg">
+                </a>
+                <a href="#masala-chai" class="gallery-image hover-scale" data-alt="Masala Chai">
+                    <img src="assets/chai.jpeg" alt="Masala Chai" class="w-full h-64 object-cover rounded-lg">
+>>>>>>> parent of 1b03e39 (Update index.html)
                 </a>
             </div>
         </div>
@@ -389,15 +494,15 @@
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">What Our Guests Say</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg shadow-md p-6 hover-scale">
-                    <p class="text-gray-600 italic mb-4 text-base">"The paneer butter masala was divine, and the ambiance felt like home!"</p>
+                    <p class="text-gray-600 italic mb-4">"The paneer butter masala was divine, and the ambiance felt like home!"</p>
                     <p class="text-teal-700 font-semibold">Priya Sharma</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 hover-scale">
-                    <p class="text-gray-600 italic mb-4 text-base">"Best chole bhature in Mumbai! Highly recommend Sukh Sagar."</p>
+                    <p class="text-gray-600 italic mb-4">"Best chole bhature in Mumbai! Highly recommend Sukh Sagar."</p>
                     <p class="text-teal-700 font-semibold">Rahul Verma</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 hover-scale">
-                    <p class="text-gray-600 italic mb-4 text-base">"The kulfi was a perfect end to an amazing meal!"</p>
+                    <p class="text-gray-600 italic mb-4">"The kulfi was a perfect end to an amazing meal!"</p>
                     <p class="text-teal-700 font-semibold">Anita Desai</p>
                 </div>
             </div>
@@ -410,10 +515,10 @@
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">About Us</h2>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2">
-                    <img src="assets/interior.jpg" alt="Restaurant Interior" class="w-full h-auto max-h-96 object-cover rounded-lg" loading="lazy">
+                    <img src="assets/interior.jpg" alt="Restaurant Interior" class="w-full h-96 object-cover rounded-lg">
                 </div>
                 <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
-                    <p class="text-gray-600 text-base leading-relaxed">
+                    <p class="text-gray-600 leading-relaxed">
                         Sukh Sagar is a celebration of India's vegetarian culinary heritage. Our chefs craft each dish with authentic spices and love, bringing the vibrant flavors of India to your plate. Experience the warmth of our hospitality in an elegant setting inspired by Indian traditions.
                     </p>
                 </div>
@@ -422,21 +527,21 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-100">
+    <section id="contact" class="py-20 bg-ivory-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">Contact Us</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
-                    <p class="text-gray-600 text-base mb-2"><strong>Address:</strong> Behind city centre mall, Sukh Sagar, devendra nagar</p>
-                    <p class="text-gray-600 text-base mb-2"><strong>Phone:</strong> +91 98765 43210</p>
-                    <p class="text-gray-600 text-base mb-2"><strong>Email:</strong> contact@sukhsagar.in</p>
-                    <p class="text-gray-600 text-base"><strong>Hours:</strong> Mon-Sun, 10 AM - 11 PM</p>
+                    <p class="text-gray-600 mb-2"><strong>Address:</strong> Behind city centre mall, Sukh Sagar, devendra nagar</p>
+                    <p class="text-gray-600 mb-2"><strong>Phone:</strong> +91 98765 43210</p>
+                    <p class="text-gray-600 mb-2"><strong>Email:</strong> contact@sukhsagar.in</p>
+                    <p class="text-gray-600"><strong>Hours:</strong> Mon-Sun, 10 AM - 11 PM</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold mb-4">Find Us</h3>
-                    <div class="iframe-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59494.53161203504!2d81.57057784863284!3d21.255302600000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd9d50bfffff%3A0x79676356f5e72b11!2sSukhsagar%20-%20Rooftop%20Restaurant!5e0!3m2!1sen!2sin!4v1748854084600!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="w-full h-64 bg-gray-200 rounded-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59494.53161203504!2d81.57057784863284!3d21.255302600000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd9d50bfffff%3A0x79676356f5e72b11!2sSukhsagar%20-%20Rooftop%20Restaurant!5e0!3m2!1sen!2sin!4v1748854084600!5m2!1sen!2sin" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -450,15 +555,15 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Smooth Scroll Script -->
     <script>
-        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+<<<<<<< HEAD
                 // Close mobile menu on link click
                 if (window.innerWidth < 640) {
                     navMenu.classList.remove('active');
@@ -484,6 +589,8 @@
                     e.preventDefault();
                     item.classList.toggle('active');
                 }
+=======
+>>>>>>> parent of 1b03e39 (Update index.html)
             });
         });
     </script>
