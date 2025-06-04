@@ -103,11 +103,11 @@
         .hamburger .close-icon {
             display: none;
         }
-        .hamburger.active .open-icon {
-            display: none;
-        }
         .hamburger.active .close-icon {
             display: block;
+        }
+        .hamburger.active .open-icon {
+            display: none;
         }
         /* Mobile-specific styles */
         @media (max-width: 640px) {
@@ -177,6 +177,103 @@
                 display: flex !important;
             }
         }
+        /* New Animation Styles */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .animate-section {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .animate-menu-item:nth-child(odd) {
+            opacity: 0;
+            animation: slideInLeft 0.6s ease-out forwards;
+            animation-delay: calc(var(--index) * 0.1s);
+        }
+        .animate-menu-item:nth-child(even) {
+            opacity: 0;
+            animation: slideInRight 0.6s ease-out forwards;
+            animation-delay: calc(var(--index) * 0.1s);
+        }
+        .animate-gallery-item:nth-child(odd) {
+            opacity: 0;
+            animation: slideInLeft 0.6s ease-out forwards;
+            animation-delay: calc(var(--index) * 0.1s);
+        }
+        .animate-gallery-item:nth-child(even) {
+            opacity: 0;
+            animation: slideInRight 0.6s ease-out forwards;
+            animation-delay: calc(var(--index) * 0.1s);
+        }
+        .animate-pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        .animate-bounce {
+            animation: bounce 2s infinite ease-in-out;
+            animation-delay: calc(var(--index) * 0.2s);
+        }
+        .hero-bg {
+            background: linear-gradient(45deg, #0d9488, #14b8a6, #2dd4bf, #0d9488);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -210,33 +307,33 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1606490734537-2d37a395a8f6'); background-size: cover; background-position: center;" role="main">
-        <div class="h-full flex items-center justify-center bg-teal-900 bg-opacity-70">
+    <section id="home" class="h-screen bg-cover bg-center hero-bg" style="background-image: url('https://images.unsplash.com/photo-1606490734537-2d37a395a8f6'); background-size: cover; background-position: center;" role="main">
+        <div class="h-full flex items-center justify-center bg-teal-900 bg-opacity-70 animate-section">
             <div class="text-center text-white">
                 <h1 class="text-4xl sm:text-5xl font-bold mb-4">Sukh Sagar</h1>
                 <p class="text-lg sm:text-xl mb-6">Pure Vegetarian Indian Delights</p>
-                <a href="#menu" class="bg-yellow-500 text-teal-900 px-10 py-4 rounded-full hover:bg-yellow-400 transition text-lg">Explore Our Menu</a>
+                <a href="#menu" class="bg-yellow-500 text-teal-900 px-10 py-4 rounded-full hover:bg-yellow-400 transition text-lg animate-pulse">Explore Our Menu</a>
             </div>
         </div>
     </section>
 
     <!-- Special Offers Banner -->
-    <section id="offers" class="py-8 bg-yellow-500 text-teal-900">
+    <section id="offers" class="py-8 bg-yellow-500 text-teal-900 animate-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-4">Special Offers</h2>
             <p class="text-lg mb-4">Enjoy 20% off on your first dine-in or get a free dessert with orders above ₹500!</p>
-            <a href="#contact" class="bg-teal-700 text-white px-8 py-3 rounded-full hover:bg-teal-600 transition text-lg">Reserve Now</a>
+            <a href="#contact" class="bg-teal-700 text-white px-8 py-3 rounded-full hover:bg-teal-600 transition text-lg animate-pulse">Reserve Now</a>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 bg-white menu-section">
+    <section id="menu" class="py-20 bg-white menu-section animate-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">Our Vegetarian Menu</h2>
             <!-- Starters -->
             <h3 class="text-2xl font-semibold text-teal-700 mb-6">Starters</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-                <div id="aloo-tikki" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Golden crispy potato patties spiced with cumin and coriander, served with tangy tamarind chutney and mint yogurt dip.">
+                <div id="aloo-tikki" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 1;" data-description="Golden crispy potato patties spiced with cumin and coriander, served with tangy tamarind chutney and mint yogurt dip.">
                     <img src="assets/aloo tikki.jpeg" alt="Aloo Tikki" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Aloo Tikki</h4>
@@ -244,7 +341,7 @@
                         <p class="text-yellow-500 font-bold">₹99</p>
                     </div>
                 </div>
-                <div id="paneer-pakora" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Soft paneer cubes coated in a spiced chickpea flour batter, deep-fried to a golden crisp, paired with spicy green chutney.">
+                <div id="paneer-pakora" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 2;" data-description="Soft paneer cubes coated in a spiced chickpea flour batter, deep-fried to a golden crisp, paired with spicy green chutney.">
                     <img src="assets/paneer pakoda.jpeg" alt="Paneer Pakora" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Paneer Pakora</h4>
@@ -252,7 +349,7 @@
                         <p class="text-yellow-500 font-bold">₹149</p>
                     </div>
                 </div>
-                <div id="hara-bhara-kebab" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Vibrant green patties made from spinach, green peas, and potatoes, infused with aromatic spices, grilled to perfection.">
+                <div id="hara-bhara-kebab" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 3;" data-description="Vibrant green patties made from spinach, green peas, and potatoes, infused with aromatic spices, grilled to perfection.">
                     <img src="assets/harabhara kabab.jpeg" alt="Hara Bhara Kebab" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Hara Bhara Kebab</h4>
@@ -264,7 +361,7 @@
             <!-- Main Courses -->
             <h3 class="text-2xl font-semibold text-teal-700 mb-6">Main Courses</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-                <div id="chole-bhature" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Spicy chickpea curry slow-cooked with aromatic spices, served with fluffy, deep-fried bhature bread.">
+                <div id="chole-bhature" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 1;" data-description="Spicy chickpea curry slow-cooked with aromatic spices, served with fluffy, deep-fried bhature bread.">
                     <img src="assets/chole bhature.jpeg" alt="Chole Bhature" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Chole Bhature</h4>
@@ -272,7 +369,7 @@
                         <p class="text-yellow-500 font-bold">₹199</p>
                     </div>
                 </div>
-                <div id="veg-biryani" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Aromatic basmati rice layered with fresh vegetables, saffron, and exotic spices, served with cooling raita.">
+                <div id="veg-biryani" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 2;" data-description="Aromatic basmati rice layered with fresh vegetables, saffron, and exotic spices, served with cooling raita.">
                     <img src="assets/veg biryani.jpeg" alt="Veg Biryani" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Veg Biryani</h4>
@@ -280,7 +377,7 @@
                         <p class="text-yellow-500 font-bold">₹249</p>
                     </div>
                 </div>
-                <div id="dal-makhani" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Creamy black lentils slow-cooked with butter, cream, and a blend of spices for a rich, velvety texture.">
+                <div id="dal-makhani" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 3;" data-description="Creamy black lentils slow-cooked with butter, cream, and a blend of spices for a rich, velvety texture.">
                     <img src="assets/dal makhani.jpeg" alt="Dal Makhani" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Dal Makhani</h4>
@@ -288,7 +385,7 @@
                         <p class="text-yellow-500 font-bold">₹179</p>
                     </div>
                 </div>
-                <div id="paneer-butter-masala" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Tender paneer cubes simmered in a rich, buttery tomato-based gravy with a hint of cream and spices.">
+                <div id="paneer-butter-masala" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 4;" data-description="Tender paneer cubes simmered in a rich, buttery tomato-based gravy with a hint of cream and spices.">
                     <img src="assets/paneer butter masala.jpeg" alt="Paneer Butter Masala" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Paneer Butter Masala</h4>
@@ -296,7 +393,7 @@
                         <p class="text-yellow-500 font-bold">₹269</p>
                     </div>
                 </div>
-                <div id="malai-kofta" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Soft vegetable and paneer dumplings in a creamy cashew and tomato sauce, mildly spiced for a luxurious taste.">
+                <div id="malai-kofta" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 5;" data-description="Soft vegetable and paneer dumplings in a creamy cashew and tomato sauce, mildly spiced for a luxurious taste.">
                     <img src="assets/malai kofta.jpeg" alt="Malai Kofta" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Malai Kofta</h4>
@@ -304,7 +401,7 @@
                         <p class="text-yellow-500 font-bold">₹289</p>
                     </div>
                 </div>
-                <div id="veg-korma" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="A medley of fresh vegetables cooked in a creamy coconut and cashew curry, infused with mild spices.">
+                <div id="veg-korma" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 6;" data-description="A medley of fresh vegetables cooked in a creamy coconut and cashew curry, infused with mild spices.">
                     <img src="assets/veg korma.jpeg" alt="Veg Korma" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Veg Korma</h4>
@@ -316,7 +413,7 @@
             <!-- Desserts & Drinks -->
             <h3 class="text-2xl font-semibold text-teal-700 mb-6">Desserts & Drinks</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div id="gulab-jamun" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Soft, melt-in-the-mouth milk dumplings soaked in rose-flavored sugar syrup, garnished with pistachios.">
+                <div id="gulab-jamun" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 1;" data-description="Soft, melt-in-the-mouth milk dumplings soaked in rose-flavored sugar syrup, garnished with pistachios.">
                     <img src="assets/gulab jamun.jpeg" alt="Gulab Jamun" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Gulab Jamun</h4>
@@ -324,7 +421,7 @@
                         <p class="text-yellow-500 font-bold">₹79</p>
                     </div>
                 </div>
-                <div id="kulfi" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Rich, creamy Indian ice cream infused with cardamom and saffron, topped with slivers of almonds and pistachios.">
+                <div id="kulfi" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 2;" data-description="Rich, creamy Indian ice cream infused with cardamom and saffron, topped with slivers of almonds and pistachios.">
                     <img src="assets/kulfi.jpeg" alt="Kulfi" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Kulfi</h4>
@@ -332,7 +429,7 @@
                         <p class="text-yellow-500 font-bold">₹99</p>
                     </div>
                 </div>
-                <div id="masala-chai" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale" data-description="Aromatic Indian tea brewed with a blend of spices like cardamom, cinnamon, and ginger, served with steamed milk.">
+                <div id="masala-chai" class="menu-item bg-gray-100 rounded-lg shadow-md overflow-hidden hover-scale animate-menu-item" style="--index: 3;" data-description="Aromatic Indian tea brewed with a blend of spices like cardamom, cinnamon, and ginger, served with steamed milk.">
                     <img src="assets/chai.jpeg" alt="Masala Chai" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-semibold mb-2">Masala Chai</h4>
@@ -345,38 +442,38 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-gray-100 gallery-section">
+    <section id="gallery" class="py-20 bg-gray-100 gallery-section animate-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">Gallery</h2>
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="#menu" class="gallery-image hover-scale" data-alt="Our elegant dining area with warm lighting and traditional Indian decor, perfect for family gatherings.">
+                <a href="#menu" class="gallery-image hover-scale animate-gallery-item" style="--index: 1;" data-alt="Our elegant dining area with warm lighting and traditional Indian decor, perfect for family gatherings.">
                     <img src="assets/dinning table.jpeg" alt="Dining Area" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#menu" class="gallery-image hover-scale" data-alt="The vibrant interior of Sukh Sagar, blending modern design with classic Indian aesthetics.">
+                <a href="#menu" class="gallery-image hover-scale animate-gallery-item" style="--index: 2;" data-alt="The vibrant interior of Sukh Sagar, blending modern design with classic Indian aesthetics.">
                     <img src="assets/interior.jpeg" alt="Restaurant Interior" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#menu" class="gallery-image hover-scale" data-alt="Our chefs crafting fresh, authentic vegetarian dishes with care and precision in our open kitchen.">
+                <a href="#menu" class="gallery-image hover-scale animate-gallery-item" style="--index: 3;" data-alt="Our chefs crafting fresh, authentic vegetarian dishes with care and precision in our open kitchen.">
                     <img src="assets/food prep2.jpeg" alt="Food Prep" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#chole-bhature" class="gallery-image hover-scale" data-alt="Spicy chickpea curry with fluffy bhature, a North Indian classic bursting with flavor.">
+                <a href="#chole-bhature" class="gallery-image hover-scale animate-gallery-item" style="--index: 4;" data-alt="Spicy chickpea curry with fluffy bhature, a North Indian classic bursting with flavor.">
                     <img src="assets/chole bhature.jpeg" alt="Chole Bhature" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#aloo-tikki" class="gallery-image hover-scale" data-alt="Crispy aloo tikki, golden-fried and served with tangy tamarind chutney.">
+                <a href="#aloo-tikki" class="gallery-image hover-scale animate-gallery-item" style="--index: 5;" data-alt="Crispy aloo tikki, golden-fried and served with tangy tamarind chutney.">
                     <img src="assets/aloo tikki.jpeg" alt="Aloo Tikki" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#paneer-pakora" class="gallery-image hover-scale" data-alt="Golden paneer pakora, crispy outside and soft inside, paired with spicy chutney.">
+                <a href="#paneer-pakora" class="gallery-image hover-scale animate-gallery-item" style="--index: 6;" data-alt="Golden paneer pakora, crispy outside and soft inside, paired with spicy chutney.">
                     <img src="assets/paneer pakoda.jpeg" alt="Paneer Pakora" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#veg-biryani" class="gallery-image hover-scale" data-alt="Fragrant veg biryani with layers of spiced rice and fresh vegetables, served with raita.">
+                <a href="#veg-biryani" class="gallery-image hover-scale animate-gallery-item" style="--index: 7;" data-alt="Fragrant veg biryani with layers of spiced rice and fresh vegetables, served with raita.">
                     <img src="assets/veg biryani.jpeg" alt="Veg Biryani" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#gulab-jamun" class="gallery-image hover-scale" data-alt="Soft gulab jamun soaked in sweet rose syrup, garnished with pistachios.">
+                <a href="#gulab-jamun" class="gallery-image hover-scale animate-gallery-item" style="--index: 8;" data-alt="Soft gulab jamun soaked in sweet rose syrup, garnished with pistachios.">
                     <img src="assets/gulab jamun.jpeg" alt="Gulab Jamun" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#kulfi" class="gallery-image hover-scale" data-alt="Creamy kulfi with cardamom and saffron, topped with nuts for a delightful dessert.">
+                <a href="#kulfi" class="gallery-image hover-scale animate-gallery-item" style="--index: 9;" data-alt="Creamy kulfi with cardamom and saffron, topped with nuts for a delightful dessert.">
                     <img src="assets/kulfi.jpeg" alt="Kulfi" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
-                <a href="#masala-chai" class="gallery-image hover-scale" data-alt="Steaming masala chai brewed with aromatic spices, perfect for a cozy experience.">
+                <a href="#masala-chai" class="gallery-image hover-scale animate-gallery-item" style="--index: 10;" data-alt="Steaming masala chai brewed with aromatic spices, perfect for a cozy experience.">
                     <img src="assets/chai.jpeg" alt="Masala Chai" class="w-full h-64 object-cover rounded-lg" loading="lazy">
                 </a>
             </div>
@@ -384,19 +481,19 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-teal-50">
+    <section id="testimonials" class="py-20 bg-teal-50 animate-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">What Our Guests Say</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                <div class="bg-white rounded-lg shadow-md p-6 hover-scale animate-bounce" style="--index: 1;">
                     <p class="text-gray-600 italic mb-4 text-base">"The paneer butter masala was divine, and the ambiance felt like home!"</p>
                     <p class="text-teal-700 font-semibold">Priya Sharma</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                <div class="bg-white rounded-lg shadow-md p-6 hover-scale animate-bounce" style="--index: 2;">
                     <p class="text-gray-600 italic mb-4 text-base">"Best chole bhature in Mumbai! Highly recommend Sukh Sagar."</p>
                     <p class="text-teal-700 font-semibold">Rahul Verma</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 hover-scale">
+                <div class="bg-white rounded-lg shadow-md p-6 hover-scale animate-bounce" style="--index: 3;">
                     <p class="text-gray-600 italic mb-4 text-base">"The kulfi was a perfect end to an amazing meal!"</p>
                     <p class="text-teal-700 font-semibold">Anita Desai</p>
                 </div>
@@ -405,7 +502,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-white animate-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">About Us</h2>
             <div class="flex flex-col md:flex-row items-center">
@@ -422,7 +519,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-100">
+    <section id="contact" class="py-20 bg-gray-100 animate-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">Contact Us</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -486,6 +583,29 @@
                 }
             });
         });
+
+        // Intersection Observer for triggering animations
+        const sections = document.querySelectorAll('.animate-section');
+        const menuItems = document.querySelectorAll('.animate-menu-item');
+        const galleryItems = document.querySelectorAll('.animate-gallery-item');
+
+        const observerOptions = {
+            root: null,
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+        menuItems.forEach(item => observer.observe(item));
+        galleryItems.forEach(item => observer.observe(item));
     </script>
 </body>
 </html>
